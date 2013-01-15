@@ -1,0 +1,21 @@
+This project is used to run benchmark applications in:
+http://linaro-private.git.linaro.org/git/people/bhoj/benchmarks.git
+
+1. steps to run the uiautomator script:
+* have a fully built Android source tree
+* build the test:
+  mmm external/thirdparty-benchmarks
+* deploy the test:
+  adb push ${OUT}/data/local/tmp/linaro.android.jar /data/local/tmp/
+* run the test:
+  adb shell uiautomator runtest linaro.android.jar \
+    -c org.linaro.benchmarks.BenchmarksTestCase#${test_method}
+
+Steps to create new tests off it:
+* open file src/org/linaro/benchmarks/BenchmarksTestCase.java
+* add method like testLinpack
+
+2. steps to run the scripts in benchmarks-script directory
+* checkout this git repository
+* run command like "monkeyrunner benchmarks-script/antutu/run.py" for antutu test
+
