@@ -12,7 +12,6 @@ package org.linaro;
 import java.io.File;
 
 import android.app.Activity;
-import android.graphics.Point;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -46,9 +45,6 @@ public class SettingsTestCase extends UiAutomatorTestCase {
     public void testSetSleep30Minutes() throws Exception{
         Bundle status = new Bundle();
         status.putString("product", getUiDevice().getProductName());
-        Point p = getUiDevice().getDisplaySizeDp();
-        status.putInt("dp-width", p.x);
-        status.putInt("dp-height", p.y);
         //application related
         openSettingsApp();
         UiScrollable settingsItem = new UiScrollable(new UiSelector()
@@ -67,9 +63,6 @@ public class SettingsTestCase extends UiAutomatorTestCase {
     public void testSetScreenLockNone() throws Exception{
         Bundle status = new Bundle();
         status.putString("product", getUiDevice().getProductName());
-        Point p = getUiDevice().getDisplaySizeDp();
-        status.putInt("dp-width", p.x);
-        status.putInt("dp-height", p.y);
         //application related
         openSettingsApp();
         UiScrollable settingsItem = new UiScrollable(new UiSelector()
@@ -85,9 +78,6 @@ public class SettingsTestCase extends UiAutomatorTestCase {
     public void testSetStayAwake() throws Exception{
         Bundle status = new Bundle();
         status.putString("product", getUiDevice().getProductName());
-        Point p = getUiDevice().getDisplaySizeDp();
-        status.putInt("dp-width", p.x);
-        status.putInt("dp-height", p.y);
         //application related
         openSettingsApp();
         UiScrollable settingsItem = new UiScrollable(new UiSelector()

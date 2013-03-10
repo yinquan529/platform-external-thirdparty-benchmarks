@@ -12,7 +12,6 @@ package org.linaro.benchmarks;
 import java.io.File;
 
 import android.app.Activity;
-import android.graphics.Point;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -74,9 +73,6 @@ public class BenchmarksTestCase extends UiAutomatorTestCase {
     public void testOrientationNatural() throws Exception{
         Bundle status = new Bundle();
         status.putString("product", getUiDevice().getProductName());
-        Point p = getUiDevice().getDisplaySizeDp();
-        status.putInt("dp-width", p.x);
-        status.putInt("dp-height", p.y);
         //Application specific
         getUiDevice().setOrientationNatural();
         getUiDevice().freezeRotation();
@@ -88,9 +84,6 @@ public class BenchmarksTestCase extends UiAutomatorTestCase {
     public void testGeekbench() throws Exception{
         Bundle status = new Bundle();
         status.putString("product", getUiDevice().getProductName());
-        Point p = getUiDevice().getDisplaySizeDp();
-        status.putInt("dp-width", p.x);
-        status.putInt("dp-height", p.y);
         //application related
         UiSelector selector = new UiSelector();
         UiObject btn_run = new UiObject(selector.text("Run Benchmarks")
@@ -123,9 +116,6 @@ public class BenchmarksTestCase extends UiAutomatorTestCase {
     public void testLinpack() throws Exception{
         Bundle status = new Bundle();
         status.putString("product", getUiDevice().getProductName());
-        Point p = getUiDevice().getDisplaySizeDp();
-        status.putInt("dp-width", p.x);
-        status.putInt("dp-height", p.y);
         UiSelector selector = new UiSelector();
         UiObject btn_st = new UiObject(selector.text("Run Single Thread"));
         btn_st.click();
@@ -141,11 +131,7 @@ public class BenchmarksTestCase extends UiAutomatorTestCase {
     public void testAntutu() throws Exception{
         Bundle status = new Bundle();
         status.putString("product", getUiDevice().getProductName());
-        Point p = getUiDevice().getDisplaySizeDp();
-        status.putInt("dp-width", p.x);
-        status.putInt("dp-height", p.y);
         UiSelector selector = new UiSelector();
-        //
         //click the Test test
         UiObject text_scores = new UiObject(selector.text("Scores")
                                        .className("android.widget.TextView"));
@@ -191,9 +177,6 @@ public class BenchmarksTestCase extends UiAutomatorTestCase {
     public void testCaffeine() throws Exception{
         Bundle status = new Bundle();
         status.putString("product", getUiDevice().getProductName());
-        Point p = getUiDevice().getDisplaySizeDp();
-        status.putInt("dp-width", p.x);
-        status.putInt("dp-height", p.y);
         //Application specific
         UiSelector selector = new UiSelector();
         UiObject btn_run = new UiObject(selector.text("Run benchmark")
@@ -218,9 +201,6 @@ public class BenchmarksTestCase extends UiAutomatorTestCase {
     public void testAndEBench() throws Exception{
         Bundle status = new Bundle();
         status.putString("product", getUiDevice().getProductName());
-        Point p = getUiDevice().getDisplaySizeDp();
-        status.putInt("dp-width", p.x);
-        status.putInt("dp-height", p.y);
         //Application specific
         getUiDevice().setOrientationNatural();
         UiSelector selector = new UiSelector();
@@ -253,9 +233,6 @@ public class BenchmarksTestCase extends UiAutomatorTestCase {
     public void testNBench() throws Exception{
         Bundle status = new Bundle();
         status.putString("product", getUiDevice().getProductName());
-        Point p = getUiDevice().getDisplaySizeDp();
-        status.putInt("dp-width", p.x);
-        status.putInt("dp-height", p.y);
         //Application specific
         getUiDevice().setOrientationNatural();
         UiSelector selector = new UiSelector();
@@ -289,9 +266,6 @@ public class BenchmarksTestCase extends UiAutomatorTestCase {
     public void testQuadrant() throws Exception{
         Bundle status = new Bundle();
         status.putString("product", getUiDevice().getProductName());
-        Point p = getUiDevice().getDisplaySizeDp();
-        status.putInt("dp-width", p.x);
-        status.putInt("dp-height", p.y);
         //Application specific
         getUiDevice().setOrientationNatural();
         UiSelector selector = new UiSelector();
@@ -338,9 +312,6 @@ public class BenchmarksTestCase extends UiAutomatorTestCase {
     public void testVellamo() throws Exception{
         Bundle status = new Bundle();
         status.putString("product", getUiDevice().getProductName());
-        Point p = getUiDevice().getDisplaySizeDp();
-        status.putInt("dp-width", p.x);
-        status.putInt("dp-height", p.y);
         //Application specific
         getUiDevice().setOrientationNatural();
         UiSelector selector = new UiSelector();
@@ -400,9 +371,6 @@ public class BenchmarksTestCase extends UiAutomatorTestCase {
     public void testGLBenchmark() throws Exception{
         Bundle status = new Bundle();
         status.putString("product", getUiDevice().getProductName());
-        Point p = getUiDevice().getDisplaySizeDp();
-        status.putInt("dp-width", p.x);
-        status.putInt("dp-height", p.y);
         //Application specific
         getUiDevice().setOrientationNatural();
         UiSelector selector = new UiSelector();
