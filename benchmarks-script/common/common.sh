@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#base_url="scp://linaro-lava@mombin.canonical.com/home/yongqinliu/benchmark-apks/"
-base_url="ssh://linaro-lava@linaro-private.git.linaro.org/srv/linaro-private.git.linaro.org/people/yongqinliu/benchmark-apks.git"
+base_url="ssh://linaro-lava@linaro-private.git.linaro.org/srv/linaro-private.git.linaro.org/qa/benchmark-apks.git"
 png_dir_device="/data/local/tmp/"
 post_install=""
 pre_uninstall=""

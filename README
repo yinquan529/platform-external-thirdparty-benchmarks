@@ -1,5 +1,5 @@
 This project is used to run benchmark applications in:
-ssh://linaro-private.git.linaro.org/srv/linaro-private.git.linaro.org/people/yongqinliu/benchmark-apks.git
+ssh://linaro-private.git.linaro.org/srv/linaro-private.git.linaro.org/qa/benchmark-apks.git
 
 1. Steps to build and run linaro.android.jar under the root of android source:
 * have a fully built Android source tree
